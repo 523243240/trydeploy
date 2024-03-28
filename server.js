@@ -9,6 +9,7 @@ const cors = require('cors');
 const app = express();
 const port = 8000;
 const mongoDB = 'mongodb://127.0.0.1:27017/fake_so';
+const path = require ("path")
 //Use environment variables from .env
 require('dotenv').config();
 
@@ -18,6 +19,10 @@ app.use(cors({
     credentials: true, //Allow for cookies
     optionsSuccessStatus: 200
 }));
+app.use(express.static(path.join(__dirname,"client", "build")))
+app.get("*",(req,res)=>{
+  res.sendFile((path.join(__dirname,"client/public","build","index.html")))
+})
 
 //Routers
 const questionsRouter = require('./routers/questionsRouter');
