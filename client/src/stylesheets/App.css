@@ -1,0 +1,795 @@
+body {
+  margin: 0;
+  font-family: 'Georgia';
+}
+
+input, textarea, button {
+  font-family: 'Georgia';
+}
+
+/* style for header */
+.Banner{
+  background-color: gray;
+  height: 10%;
+  border: none;
+  border-width:3px;  
+  text-align: center;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+/* style for stackoverflow header */
+.Banner h1{
+  font-weight: bold;
+  font-size: 30px;
+  display: inline-block;
+  text-align: center;   
+  cursor: pointer; 
+  margin-left: 15%;
+}
+/* style for search bar  */
+.Banner input[type = text]{
+  padding: 6px;
+  /* float:right;  */
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.Banner a {
+  margin-left: 5%;
+}
+
+.Banner button{
+  height: 30px;
+  width: 100px;
+  /* float: right; */
+  margin-left: 10%;
+  background-color: aqua;
+  color:white;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 12px;
+  display: inline-block;
+}
+
+.Banner button:hover{
+  background-color: yellow;
+  color:black;
+}
+
+.Body {
+  display: flex;
+  width: 100%;
+  min-height: 87vh;
+  margin:0;
+}
+
+/* style for side menu */
+.Menu {
+  padding-top: 10px;
+  width: 8vw;
+  position: sticky;
+}
+/* style for  menu link text*/
+.Menu button {
+  display: block;
+  text-decoration: none;
+  color:black;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+  width:  8vw;
+  height: 6vh;
+  border: none;
+  font-weight: bold;
+}
+
+/* add hover to the link*/
+.Menu button:hover{
+  color: blue;
+  background-color: gray;
+}
+button.MenuSelected {
+  color: blue;
+  background-color: gray;
+}
+
+/* style for menu link text*/
+
+#main{
+  padding-top: 10px;
+  width: 100%;
+  border-left:solid;
+  border-color: gainsboro; 
+}
+
+.HomeHeader {
+  border-bottom:solid;
+  border-color: gainsboro; 
+  padding-bottom:1%;
+}
+
+.HomeHeader h1{
+  font-weight: bold;
+  font-size: 30px;
+  display: inline-block;
+  margin: 10px 20px;
+}
+.HomeHeader span{
+  margin-left: 20px;
+}
+/* style for new/act/unans button*/
+.FilterButtons{
+  display: inline;
+  margin-left:60%;
+  margin-right: 10%;
+  cursor: pointer;
+}
+
+.FilterButtons button {
+  background-color: white;
+  border-radius: 1px;
+  border-width: 1px;
+  padding: 5px;
+}
+
+.FilterButtons button:hover {
+  background-color: skyblue;
+  color:black;
+}
+.AskQuestion{
+  height: 30px;
+  width: 100px;
+  float: right;
+  margin-right: 30px;
+  background-color: aqua;
+  color:white;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.AskQuestion:hover{
+  background-color: yellow;
+  color:black;
+}
+
+.all-question{
+  width: 100%;
+  min-height:100px;
+  border-bottom: solid;
+  border-color: gainsboro; 
+}
+
+/* Style for questions list */
+.QuestionList {
+  overflow-y: scroll;
+  max-height: 500px;
+}
+
+.Question{
+  display:flex;
+  border-bottom: solid;
+  border-color: gainsboro; 
+  border-width: 1px;
+}
+.QTitle span{
+  font-size: 18px;
+  font-weight: bold;
+  color:rgb(105, 192, 221);
+  text-decoration: none;
+  cursor: pointer;
+}
+.QStats{
+  width: 10%;
+  padding: 2% 0 0 2%;
+}
+.QSummary {
+  font-size: 14px;
+}
+.QBody{
+  padding-top: 2%;
+  padding-left: 5%;
+  padding-bottom: 1%;
+  width: 65%;
+  font-size: 18px;
+}
+.QAskData{
+  margin-top: 2.5%;
+}
+.QUser{
+  color: crimson;
+}
+.QTime{
+  color: rgb(164, 164, 164);
+}
+.QTag{
+  margin-top: 2%;
+  margin-left: 2%;
+  font-weight: bold;
+  color: white;
+  background-color: darkgray;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor:pointer;
+}
+.QTag:hover {
+  color: rgb(77, 77, 255);
+}
+
+.PageButton {
+  color:white;
+  background-color: rgb(137, 205, 227); 
+  height: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 50px;
+  border-radius: 5px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.PageButton:hover {
+  background-color: cyan;
+}
+
+.PageButton:disabled {
+  background-color: gray;
+}
+
+.PageDescription {
+  margin-left: 20px;
+}
+
+#NoQuestionsFound {
+  text-align: center;
+  font-size: xx-large;
+  font-weight: bold;
+  padding: 1%;
+}
+
+
+/* style for ask new question page starts here*/
+
+.AskBody{
+  margin-left: 2%;
+}
+.AskBody h1{
+  padding-top: 5px;
+}
+.AskBody p{
+  margin-left: 6%;
+  font-style: italic;
+  font-weight: bold;
+}
+.QesTitle{
+  height: 40px;
+  width: 50%;
+}
+
+.QuestionSummary {
+  height:300px;
+  width:50%;
+  overflow: scroll;
+}
+
+.QuestionDetail{
+  height:300px;
+  width:50%;
+  overflow: scroll;
+}
+
+.tags{
+  height: 40px;
+  width: 400px;
+}
+#tagsInput{
+  height: 30px;
+  width:  30%;
+}
+.username{
+  height: 40px;
+  width: 400px;
+}
+.PostQuestion{
+  color:white;
+  background-color: rgb(137, 205, 227);
+  width:130px; 
+  height: 40px;
+  margin-left: 5%;
+  font-weight: bold;
+  cursor: pointer;
+}
+.AskBody button:hover{
+  background-color: yellow;
+  color: black;
+}
+#indMandatory{
+  margin-left: 10%;
+  font-size: 18px;
+  color: red;
+  text-align: center;
+}
+.inputErrorMsg {
+  color: red;
+}
+
+/* style for answer page starts here*/
+
+.AQuestionHeader{
+  padding: 2% 2%;
+  display: flex;
+  font-size:large;
+  font-weight:bold;
+}
+
+.AAnswerCounter {
+  width: 15%;
+}
+
+.ATitle {
+  width: 80%;
+}
+
+.AQuestionContainer {
+  border-bottom: solid;
+  border-color: gainsboro; 
+}
+
+.AQuestionBody{
+  display: flex;
+  padding: 2% 2%;
+}
+
+.ABodyInfo {
+  width: 15%;
+  font-size:large;
+  font-weight:bold;
+}
+
+.ABodyInfo div {
+  margin-bottom: 20px;
+}
+
+
+.VoteButton {
+  display: block;
+  border-radius: 20px;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+  font-size: 30px;
+  border-color: gainsboro;
+}
+
+.VoteButton:hover {
+  background-color: lightgreen;
+}
+
+.Downvote {
+  transform: rotate(180deg);
+}
+
+.Downvote:hover {
+  background-color: lightcoral;
+}
+
+.VoteErrorMessage {
+  color: red;
+}
+
+.AQuestionText {
+  width: 70%;
+}
+
+.AAskData {
+  padding-left: 1%;
+}
+
+.AnswerList {
+  overflow-y: scroll;
+  max-height: 800px;
+}
+
+.AnswerContainer {
+  border-bottom: solid;
+  border-color: gainsboro; 
+  border-width: 1px;
+  padding-bottom: 20px;
+}
+
+.Answer {
+  padding: 2% 2% 10px;
+  display: flex;
+}
+.EditAnswerButton:hover{
+  background-color: yellow;
+  color: black;
+}
+
+.AVotesContainer {
+  width: 15%;
+  padding-top: 10px;
+  margin-right: 10px;
+}
+
+.AVotesContainer div {
+  margin-bottom: 20px;
+}
+
+.AText {
+  width: 70%;
+}
+
+.AData {
+  padding-left: 1%;
+}
+
+.AUser{
+  color: forestgreen;
+}
+.ATime{
+  color: rgb(164, 164, 164);
+}
+
+
+.CommentList {
+  border-top: solid;
+  border-color: gainsboro;
+  margin-left: 20%;
+  width: 65%;
+  padding-bottom: 10px;
+}
+
+.Comment {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: solid;
+  border-width: 1px;;
+  border-color: gainsboro;
+}
+
+.CommentText {
+  font-size: 14px;
+}
+
+.CommentDate {
+  color: rgb(164, 164, 164);
+}
+
+.CommentUser {
+  color:cadetblue;
+}
+
+.CommentVotes {
+  display: inline-block;
+  width: 25px;
+}
+
+.CommentVoteButton {
+  border-radius: 12px;
+  width: 24px;
+  height: 24px;
+  font-size: 10px;
+  font-weight: bold;
+  margin-right: 10px;
+  border-color: gainsboro;
+}
+
+.CommentVoteButton:hover {
+  background-color: lightgreen;
+}
+
+.CommentInput {
+  margin:0;
+  margin-top: 10px;
+  width: 80%;
+  border: solid;
+  border-width: 2px;
+  border-color: gainsboro;
+  font-family: Georgia;
+}
+
+.CommentButton {
+  color:white;
+  background-color: rgb(137, 205, 227); 
+  height: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 100px;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+.CommentButton:hover {
+  background-color: cyan;
+}
+
+.CommentErrorMsg {
+  color: red;
+}
+
+#ansQuestion{
+  margin: 30px 30px;
+  background-color: aqua;
+  color:white;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px 5px;
+}
+
+#ansQuestion:hover{
+  background-color: yellow;
+  color:black;
+}
+
+/* style for new answer page starts here*/
+.new_answer_page button,h1,input,textarea{
+  margin-left: 5%;
+}
+.new_answer_page textarea{
+  width: 50%;
+  height: 400px;
+}
+.new_answer_page p{
+  margin-left: 6%;
+  font-style: italic;
+  font-weight: bold;
+}
+.new_answer_page button:hover{
+  background-color: yellow;
+  color: black;
+}
+.username_input{
+  height: 40px;
+  width: 50%;
+  overflow: auto;
+}
+
+/* style for tags page starts here*/
+
+
+.tag_header{
+  list-style-type: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  
+  
+}
+.tag_header ul {
+  padding-inline-start: 0px;
+}
+.tag_header li{
+  display: inline-block;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  font-size: 25px;
+  font-weight: bold;
+  
+}
+.tag_display{
+  min-height: 50px;
+  width:  100px;
+  border: solid;
+  border-width: 2px;
+  border-color: gainsboro; 
+  text-align: center;
+  margin-left: 17%;
+  margin-top: 5%;
+  display: inline-block;
+  padding: 10px;
+}
+.tag_display p {
+  padding: 0;
+  margin: 5%;
+}
+.tag_display input{
+  width: 80%;
+}
+.tag_name {
+  cursor: pointer;
+  color: rgb(77, 77, 255);
+  text-decoration: underline;
+}
+
+/********** Welcome Page *****************/
+
+#WelcomeHeader {
+  font-weight: bold;
+  font-size: 32px;
+  text-align: center;
+  margin: 0;
+  margin-top: 30px;
+}
+
+#WelcomeBody {
+  width: 100%;
+  margin-top: 10%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+#WelcomeButtonsContainer {
+  text-align: center;
+}
+
+.WelcomeButton {
+  display: block;
+  position: relative;
+  color:white;
+  background-color: rgb(137, 205, 227); 
+  height: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 200px;
+  border-radius: 5px;
+}
+
+.WelcomeButton:hover {
+  background-color: cyan;
+}
+
+/* style for login page starts here*/
+.login{
+  background-color: rgb(137, 205, 227);
+  position: relative;
+  margin: 10% 25% 0 25%;
+  width : 40%;
+  height: 50%;
+  border-radius: 1em;
+  box-shadow: rgb(137, 205, 227);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 5px;
+}
+
+.login input{
+  height: 30px;
+  border-radius: 0.5em;
+  width: 80%;
+}
+
+.login p{
+  margin-left: 5%;
+}
+
+.login button{
+  height: 40px;
+  width: 100px;
+  /* float: right; */
+  margin-top: 10%;
+  background-color: aqua;
+  color:white;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 12px;
+  display: inline-block;
+  cursor:pointer;
+  margin-left: 30%;
+}
+
+.login button:hover{
+  background-color: yellow;
+  color:black;
+}
+
+.login_error {
+  color:red;
+}
+
+
+.ErrorMessage {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: absolute;
+  width: 100%;
+  background-color: rgba(255, 0, 0, 0.6);
+  text-align: center;
+  font-size: 24px;
+  z-index: 99;
+}
+
+.ProfileUser {
+  margin-left: 50px;
+  margin-top: 50px;
+}
+
+.ProfileUser h1 {
+  text-align: left;
+  margin: 0;
+}
+
+.QuestionsAsked {
+  font-size: 24px;
+  margin-top: 50px;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+.QuestionsAnswered h1 {
+  margin: 0;
+  margin-top: 20px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  border-bottom: solid; 
+  border-color: gainsboro;
+  border-width: 2px;
+}
+.ProfileUser button {
+  width: 120px;
+  height: 30px;
+  margin-left: 10%;
+}
+.ProfileUser button:hover{
+  background-color: yellow;
+  color:black;
+}
+.alter-container {
+  width: 35%;
+  height: 30%;
+  background-color: red;
+  border-radius: 1em;
+  box-shadow: rgb(137, 205, 227);
+  position: relative;
+  padding: 5px;
+  margin-bottom: 20px;
+} 
+.alter-container p{
+  text-align: center;
+  font-size: 20px;
+}
+
+.UserMenu {
+  padding-left: 15px;
+  border-bottom: solid;
+  border-color: gainsboro;
+  border-width: 2px;
+}
+
+.UserMenuButton {
+  text-decoration: none;
+  color:black;
+  padding: 10px;
+  cursor: pointer;
+  height: 50px;
+  border: none;
+  font-weight: bold;
+}
+
+/* add hover to the link*/
+.UserMenuButton:hover{
+  color: blue;
+  background-color: gray;
+}
+
+.UsersInSystem {
+  font-size: 24px;
+  margin-top: 50px;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+
+.UserInSystem {
+  border-top: solid;
+  border-color: gainsboro;
+  border-width: 2px;
+}
+
+.UserLink {
+  display: inline-block;
+  width: 250px;
+  margin-top:20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  color: rgb(77, 77, 255);
+  text-decoration: underline;
+}
+
+button.DeleteUserButton:hover {
+  background-color: red;
+}
