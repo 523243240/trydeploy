@@ -7,7 +7,7 @@ const express = require('express');
 const session = require('express-session');
 const cors = require('cors');
 const app = express();
-const port = 8000;
+const port = process.env.PORT||8000;
 const mongoDB = 'mongodb://127.0.0.1:27017/fake_so';
 const path = require ("path")
 //Use environment variables from .env
